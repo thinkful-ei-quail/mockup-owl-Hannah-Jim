@@ -1,11 +1,11 @@
-import Participants from '../Participants';
+import Participant from '../Participant';
 import React from 'react';
-import { render } from '@testing-library/react';
+import ReactDOM from 'react-dom';
 
 describe ('Check Participants for errors', () => {
-  test('renders learn react link', () => {
-    const { getByText } = render(<Participants />);
-    const linkElement = getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
-  })
+  it('renders learn react link', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Participant />, div);
+    ReactDOM.unmountComponentAtNode(div);
+    })
 });
