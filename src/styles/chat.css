@@ -1,1 +1,16 @@
 /* CHAT COMPONENT */
+
+.list-avatar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 10px;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
