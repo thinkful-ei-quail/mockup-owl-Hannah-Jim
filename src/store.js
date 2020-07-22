@@ -59,6 +59,13 @@ const chatEvents = [
         timestamp: 1548852484247
     },
     {
+        participantId: 2,
+        type: 'message',
+        message: 'Greetings humans',
+        time: 1548889646559,
+        timestamp: 1548889484247
+    },
+    {
         participantId: 1,
         type: 'raise-hand',
         timestamp: 1548852544247

@@ -9,12 +9,25 @@ export default class Chat extends React.Component {
     const chatOrder = store.chatEvents.sort((p1, p2) => (p2.timestamp - p1.timestamp));
     const chatLogEntries = chatOrder.map(p => {
       const participant = store.participants.find(participant => p.participantId === participant.id);
-      if (p.message) {  
+      if (p.message) { 
+        const messageDate = new Date(p.timestamp);
+        let hh = messageDate.getHours();
+        let ampm = "AM";
+        if(hh >12) {
+          hh = hh - 12;
+          ampm = "PM"
+        } else if(hh===0) {
+          hh = 12
+        }
+        let mm = messageDate.getMinutes();
+        if(mm < 10) {
+          mm = "0" + mm;
+        }
         return (
           <ul className="typeMessages">
             <li className="avatar"><img class="list-avatar" src={participant.avatar} alt={participant.name}/></li>
             <li className="name">{participant.name}</li>
-            <li className="timestamp">{p.timestamp}</li> to be replaced with formatted time hh:mm AM/PM
+            <li className="timestamp">{hh}:{mm} {ampm}</li>
             <li className="message">{p.message}</li>
           </ul>
         );
