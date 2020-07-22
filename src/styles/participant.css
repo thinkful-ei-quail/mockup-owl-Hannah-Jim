@@ -1,0 +1,66 @@
+
+/* ACTIVE/NOT ACTIVE PARTICIPANTS STUFF */
+.status-active ,.status-notActive {
+    line-height: 30px;
+    color: #8e939a;
+    padding-left: 20px;
+    position: relative;
+    top: -10px;
+    font-family: 'Proxima Nova W01','Avenir Next W01','Avenir Next',sans-serif;
+  }
+  .active-wrapper::after { 
+    content: "";
+    position: absolute;
+    transform: translateY(-30px);
+    left: 65px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #64d481;
+  }
+  .notActive-wrapper::after { 
+    content: "";
+    position: absolute;
+    transform: translateY(-30px);
+    left: 65px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #8e939a;
+  }
+  
+  
+  
+  /* PARTICIPANT COMPONENT */
+  .participant-list {
+    padding: 10px;
+    position: relative;
+    overflow-y: scroll;
+  }
+  .participant {
+    margin: 5px;
+    display: flex;
+  }
+  .participant, .active-wrapper, .notActive-wrapper {
+    margin-left: 10px;
+  }
+  .list-avatar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    font-size: 10px;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+  }
+  h6 { 
+    font-family: 'Proxima Nova W01','Avenir Next W01','Avenir Next',sans-serif;
+    font-weight: 600;
+    color: #404853;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 30px;
+  }

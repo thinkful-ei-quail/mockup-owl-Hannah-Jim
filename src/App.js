@@ -2,17 +2,27 @@ import React from 'react';
 import Participant from './Participant';
 import Stage from './Stage';
 import Chat from './Chat';
+import './styles/app.css';
 
 function App() {
   return (
     <div>
-    <header><h1>Header</h1></header>
-    <main>
-      <Participant />
-      <Stage />
-      <Chat />
-    </main>
-    <footer>Copyright 212093 by Hannah and Jim bc they rock!!!!</footer>
+ 
+      <main>   
+        <section className="section1">       
+          <div className="menu-header">
+            <button className="side-bar-tab side-bar-tab__active">Chat</button>
+            <button className="side-bar-tab">Participants</button>
+          </div>
+          {/* if statement for rendering the active view-chat/participant list */}
+          <Participant />
+          <Chat />
+        </section>
+        <section className="section2">
+          <div className="stage"><Stage /> </div>
+        </section>
+     
+      </main>
     </div>
   );
 }
